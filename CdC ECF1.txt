@@ -39,4 +39,6 @@ Fiche de travail étape par étape ; maquettage ; charte graphique :
 
 Une fois les pages html rédiger : contrôle au w3c, hors le widget météo, le document est valider.
 
+Suppression des fonctionnialités en cours de débug par commentaires afin de les retravailler lors du passage en BDD - le site est 100% fonctionnel ainsi ;
+
 Dealine du site à ce jour le 1/12/2021 à 17h via https://github.com/acha88/ECF_1_AFPA
