@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <title>Les BD - Compte</title>
+    <link rel="stylesheet" media="screen and (max-width: 1024px)" href="css/style.css" />
+</head>
+<body>
+    <header>
+        <div class="logoImg">
+            <img src="images/logo.png" alt="logo">
+        </div>
+        <nav>
+            <a href="index.html"><i class="fas fa-home"></i></a>
+            <a href="compte.html"><i class="fas fa-user-circle"></i></a>
+        </nav>
+    </header>
+    <h2>Se connecter / Créer un compte</h2>
+    <main class="mainCompte">
+        <div id="commande">
+            <form method="" action="">
+                <div>
+                    <label for="">Nom :</label>
+                    <input type="text" name="lastName" id="lastName" required>
+                </div>
+                <br>
+                <div>
+                    <label for="">Prénom :</label>
+                    <input type="text" name="firstName" id="firstName" required>
+                </div>
+                <br>
+                <div>
+                    <label for="">Adresse :</label>
+                    <input type="text" name="address" id="address" required>
+                </div>
+                <br>
+                <div>
+                    <label for="">CP :</label>
+                    <input type="text" name="codepostal" id="codepostal" required>
+                </div>
+                <br>
+                <div>
+                    <label for="">Ville :</label>
+                    <input type="text" name="city" id="city" required>
+                </div>
+                <br>
+                <div>
+                    <label for="">Email :</label>
+                    <input type="email" name="email" id="email1" required>
+                </div>
+                <br>
+                <div>
+                    <input type="button" value="Créer votre compte">
+                </div>
+            </form>
+        </div>
+        <div id="connexion">
+            <form method="" action="">
+                <div>
+                    <label for="">Email :</label>
+                    <input type="email" name="email" id="email2" required>
+                </div>
+                <br>
+                <div>
+                    <label for="">Mot de passe :</label>
+                    <input type="password" name="password" id="password" required>
+                </div>
+                <br>
+                <div>
+                    <input type="button" value="Se connecter">
+                </div>
+                <br>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <img class="footLogo" src="images/logo.png" alt="logo">
+        <address>6 square Eugène Herzog <br> 54390 FROUARD <br>Tél. : 09.72.72.39.36 <br><a href="mailto:contact@exemple.com">contact@exemple.com</a></address>
+        <p class="partenaire"><a href="https://www.afpa.fr/centre/centre-de-pompey">AFPA</a><br><br><a href="http://www.frouard.fr/">Ville de Frouard</a></p>
+        <p class="reseauS"><a href="https://discord.gg/VBNuUqTu"><i class="fab fa-discord"></i></a><br><a href=""></a></p>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="data/albums.js"></script>
+    <script src="data/series.js"></script>
+    <script src="data/auteurs.js"></script>
+    <script src="js/modeleBD.js"></script>
+</body>
+
+</html>
