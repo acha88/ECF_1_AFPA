@@ -1,27 +1,25 @@
 Il s'agit :
 
-De présenter les BD avec quelques infos, ex : couverture, titre, prix, ... CHECK
+De présenter les BD avec quelques infos, ex : couverture, titre, prix, ... //CHECK
 
-De filtrer l'affichage à la demande, ex : par auteur, par série, ... EN COURS
+De filtrer l'affichage à la demande, ex : par auteur, par série, ... //EN COURS / Pas au point
 
-D'ajouter ou retirer facilement une BD dans un panier d'achat CHECK
+D'ajouter ou retirer facilement une BD dans un panier d'achat //CHECK
 
-De garder sous les yeux le contenu simplifié du panier CHECK
+De garder sous les yeux le contenu simplifié du panier //CHECK
 
-De pouvoir voir le détail du panier pour validation EN COURS
+De pouvoir voir le détail du panier pour validation //CHECK CASE ORANGE
 
-Toutes autres fonctionnalités que vous jugerez intéressantes 
+Toutes autres fonctionnalités que vous jugerez intéressantes //TOTAL PRIX PANIER à corriger avec la bdd
 
-Ceci en Mobile first, sans oublier pour autant les PC de bureau. Un visuel sympa, ergonomique, facile d'utilisation. CHECK
+Ceci en Mobile first, sans oublier pour autant les PC de bureau. Un visuel sympa, ergonomique, facile d'utilisation. //CHECK
 
 Une précision importante : les ventes de bandes dessinées sont plus importantes lorsque la météo est mauvaise, on vous demande donc de gérer un encart météo.
 
-Il vous faudra trouver un site proposant une API météo et l'interroger avec des requêtes Ajax/jQuery pour récupérer les informations. WIDGET CHECK
+Il vous faudra trouver un site proposant une API météo et l'interroger avec des requêtes Ajax/jQuery pour récupérer les informations. //WIDGET CHECK
 
 Après avoir contacté l'équipe qui gère le site actuel, ils confirment qu'ils prendront en charge la base de données mais pas tout de suite car trop de boulot !
-
-
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Fiche de travail étape par étape ; maquettage ; charte graphique :
 
@@ -34,7 +32,11 @@ Fiche de travail étape par étape ; maquettage ; charte graphique :
 		- avec une div qui comporte toute la librairie ; CHECK 
 		- et enfin un aside avec la couverture de la BD selectionnée avec quelques informations importantes la concernant, avec un bouton "ajouter au panier" // CHECK
 
-3eme étape = Faire la page panier / création de compte ou s'identifier // CHECK 
+3eme étape = Faire la partie panier / création de la page compte ou s'identifier // CHECK 
 	faire en sorte qu'on puisse ajouter et supprimer des articles dans le panier // CHECK
 
 4eme étape = Faire un footer avec les liens vers nos réseaux sociaux, nos partenaires et nos coordonnées. // CHECK
+
+Une fois les pages html rédiger : contrôle au w3c, hors le widget météo, le document est valider.
+
+Dealine du site à ce jour le 1/12/2021 à 17h via https://github.com/acha88/ECF_1_AFPA

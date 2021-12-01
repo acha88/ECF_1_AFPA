@@ -19,12 +19,14 @@ jQuery(document).ready(function ($) {
 	//     auteur = auteurs.get(album.idAuteur);
 	//     console.log(album.titre+" N°"+album.numero+" Série:"+serie.nom+" Auteur:"+auteur.nom);
 	// 	});
+
+	// Fonction recherche, par nom d'auteur et par nom de série (s'affiche très rapidement dans le console.log à modifier pour corriger)
 	function search() {
 		console.log("Liste des albums par série");
 		for(var [idSerie, serie] of series.entries()) {
 	    // Recherche des albums de la série
 	    	for (var [idAuteur, album] of albums.entries()) {
-	        	if (album.idSerie == idSerie) {
+	        if (album.idSerie == idSerie) {
 	            console.log(serie.nom+", Album N°"+album.numero+" "+album.titre+", Auteur:"+auteurs.get(album.idAuteur).nom);
 				document.getElementById("resultSearch").innerHTML = serie.nom +", Album N°"+album.numero+ " " + album.titre + ", Auteur : " + auteurs.get(album.idAuteur).nom;
 				}
@@ -33,8 +35,8 @@ jQuery(document).ready(function ($) {
 		console.log("Liste des albums par auteur");
 		for(var [idAuteur, auteur] of auteurs.entries()) {
 	   	// Recherche des albums de l'auteur
-	    	for (var [idSerie, album] of albums.entries()) {
-	        	if (album.idSerie == idAuteur) {
+	    for (var [idSerie, album] of albums.entries()) {
+	        if (album.idSerie == idAuteur) {
 	            console.log(auteur.nom+", Album N°"+album.numero+" "+album.titre+", Série:"+series.get(album.idSerie).nom);
 				document.getElementById("resultSearch").innerHTML = auteur.nom+", Album N°"+album.numero+" "+album.titre+", Série:"+series.get(album.idSerie).nom;
 	        	}

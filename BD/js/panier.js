@@ -1,3 +1,4 @@
+// Récupération de la map des albums et ajout d'un nouveau tableau
 var liste = new Map();
 albums.set("1", {titre: "Croc vert", numero: "23", idSerie: "6", idAuteur: "13", prix: "24.50"});
 albums.set("2", {titre: "Machine qui rêve", numero: "46", idSerie: "2", idAuteur: "14", prix: "23.50"});
@@ -532,7 +533,7 @@ albums.set("629", {titre: "Tintin en amérique(édition originale 1932)", numero
 
 var bdList = new Array();
 bdList = [];
-
+// fonction ajout pour ajouter une bd dans le panier
 function ajout() {
     let itemName = document.getElementById("titre").value;
     let itemAuthor = document.getElementById("auteur").value;
@@ -543,16 +544,15 @@ function ajout() {
     } else {
         bdList.push(itemName);
         displayList();
-        console.log(itemName,"/", itemAuthor);
         document.getElementById("afficher").innerHTML = "Titre : " + itemName + "<br> De : " + itemAuthor + "<br> Au prix de : " +  itemPrice + "€";
         }
     }
-   
+// fonction qui permet d'identifier la BD   
 function selectBD() {
     displayList();
     console.log(bdList);
 }
-
+// fonction qui permet de supprimer la ligne qui correspond à la BD
 function remove(itemName) {
     let index = bdList.indexOf(itemName);
     if (index == -1) {
@@ -562,18 +562,29 @@ function remove(itemName) {
     console.log("Votre BD : " + index + " a été supprimé du panier");
     displayList();
 }
-
+// fonction qui gère l'affichage du panier
 function displayList() {
     let listeBD = document.getElementById('liste');
+    let itemPrice = document.getElementById("prix").value;
     if (bdList == '') {
         listeBD.innerHTML = '';
     } else {
         let bd="";
         for (let i = 0; i < bdList.length; i++) {
-            bd += '<ul><li><button class="removeBtn" onclick="remove(\'' + bdList[i] + '\')"' + i + '">X</button>' + bdList[i] +'</li></ul></br>';
+            // console.log(itemPrice);
+            bd += '<ul><li><button class="removeBtn" onclick="remove(\'' + bdList[i] + '\')"' + i + '">X</button>' + bdList[i] + " au prix de : " + "xx" + "€" + '</li></ul></br>';
         }
         document.getElementById("liste").innerHTML = bd;
         console.log(bd);
         console.log(bdList);
     }
+}
+// fonction qui calcul le prix total du panier ; en conflit avec la fonction displayList, car l'itemPrice c'est pas identifiable avec la bdList  
+// n'était pas dans le cahier des charges mais peut être considérer comme une fonctionnalité intéressante à rajouter ; à modifier avec la mise en place de la BDD
+function calculPrice() {
+    let itemPrice = document.getElementById("prix").value;
+    let total = 0;
+    let totalPrice = document.getElementById("total");
+    total = total + parseFloat(itemPrice.value);
+    totalPrice.innerHTML = "Votre panier s'élève à un montant de : " + total.toFixed(2) + "€";
 }

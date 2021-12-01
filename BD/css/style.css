@@ -1,3 +1,4 @@
+/* BODY */
 body {
   padding: 0;
   margin: 0;
@@ -5,6 +6,7 @@ body {
   background-color: #d1cccc7a;
   height: auto;
 }
+/* HEADER */ 
 .logoImg {
   background-color: #000;
   padding: 1% 40%;
@@ -28,6 +30,7 @@ a {
 a:hover {
   color: #f19b26;
 }
+/* BLOC PRINCIPAL */
 .presentation {
   margin: 2% 10%;
   font-size: 17px;
@@ -79,6 +82,10 @@ h4 {
 }
 #liste {
   overflow-y: scroll;
+}
+#valid {
+  margin: 0 15%;
+  margin-bottom: 1%;
 }
 /* FOOTER */
 footer {
