@@ -41,19 +41,18 @@
                     <input type="number" required id="id" value="0" min="0" title="Saisissez un numéro et validez">
                 </div>
                 <div class="selection">
-                    <form>
+                    <!--NE FONCTIONNE PAS-->
+                    <!-- <form>
                         <div>
                             <label for="auteur">Auteur :</label>
-                            <input type="text" id="auteurSearch" placeholder="Recherche par auteur">
-                            <button id="searchAuteur" onclick="searchAuthor()">Rechercher</button>
+                            <input type="text" onclick="search()" id="auteurSearch" placeholder="Recherche par auteur">
                         </div>
                         <hr>
                         <div>
                             <label for="serie">Série :</label>
-                            <input type="text" id="serieSearch" placeholder="Recherche par série">
-                            <button id="searchSerie" onclick="searchSet()">Rechercher</button>
+                            <input type="text" onclick="search()" id="serieSearch" placeholder="Recherche par série">
                         </div>
-                    </form>
+                    </form> -->
                     
                 </div>
                 <div class="toto">
@@ -95,10 +94,11 @@
             </div>
             <h4>Votre panier :</h4>
             <div id="liste"></div>
-            <div>
+            <!--NE FONCTIONNE PAS / A CORRIGER AVEC LA BDD-->
+            <!-- <div>
                 <p id="total"></p>
                 <button id="valid" onclick="calculPrice()">Valider</button>
-            </div>
+            </div> -->
         </section>
     </main>
     <!--Fin bloc principal-->

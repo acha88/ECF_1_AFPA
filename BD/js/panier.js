@@ -565,26 +565,28 @@ function remove(itemName) {
 // fonction qui gère l'affichage du panier
 function displayList() {
     let listeBD = document.getElementById('liste');
-    let itemPrice = document.getElementById("prix").value;
     if (bdList == '') {
         listeBD.innerHTML = '';
     } else {
         let bd="";
         for (let i = 0; i < bdList.length; i++) {
             // console.log(itemPrice);
-            bd += '<ul><li><button class="removeBtn" onclick="remove(\'' + bdList[i] + '\')"' + i + '">X</button>' + bdList[i] + " au prix de : " + "xx" + "€" + '</li></ul></br>';
+            bd += '<ul><li><button class="removeBtn" onclick="remove(\'' + bdList[i] + '\')"' + i + '">X</button>' + bdList[i] + '</li></ul></br>'; //" au prix de : " + "xx" + "€" +
         }
         document.getElementById("liste").innerHTML = bd;
         console.log(bd);
         console.log(bdList);
     }
 }
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------A CORRIGER - NE FONCTIONNE PAS---------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------
 // fonction qui calcul le prix total du panier ; en conflit avec la fonction displayList, car l'itemPrice c'est pas identifiable avec la bdList  
 // n'était pas dans le cahier des charges mais peut être considérer comme une fonctionnalité intéressante à rajouter ; à modifier avec la mise en place de la BDD
-function calculPrice() {
-    let itemPrice = document.getElementById("prix").value;
-    let total = 0;
-    let totalPrice = document.getElementById("total");
-    total = total + parseFloat(itemPrice.value);
-    totalPrice.innerHTML = "Votre panier s'élève à un montant de : " + total.toFixed(2) + "€";
-}
+// function calculPrice() {
+//     let itemPrice = document.getElementById("prix").value;
+//     let total = 0;
+//     let totalPrice = document.getElementById("total");
+//     total = total + parseFloat(itemPrice.value);
+//     totalPrice.innerHTML = "Votre panier s'élève à un montant de : " + total.toFixed(2) + "€";
+// }
